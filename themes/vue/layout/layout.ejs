@@ -88,6 +88,10 @@
         <script>
         document.addEventListener('DOMContentLoaded', function() {
           FastClick.attach(document.body)
+          var links = document.querySelectorAll('#nav .language .nav-dropdown a')
+          for(var i = 0; i < links.length; i++){
+              links[i].href = links[i].getAttribute('href') + location.pathname
+          }
         }, false)
         </script>
     </body>
